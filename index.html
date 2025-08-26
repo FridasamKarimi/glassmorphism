@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initialscale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-toggle">
+                <button id="login-btn" class="active">Login</button>
+                <button id="signup-btn">Signup</button>
+            </div>
+
+
+            <div id="loginForm" class="form-box active">
+                <h2>Login</h2>
+                <form id="login-form" onsubmit="return validateLogin()">
+                    <div class="inputgroup">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="email" required>
+                        <div id="login-emailerror" class="error"> </div>
+                    </div>
+                    <div class="inputgroup">
+                        <label for="loginpassword">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter password" required>
+                        <div id="login-passworderror" class="error"> </div>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="toggle-link" onclick="toggleForm('signup')">Don't have an account?<span class="underline">Signup</span>
+                </div>
+            </div>
+<!--Signup form-->
+            <div id="lsignup-form" class="form-box">
+                <h2>Sign Up</h2>
+                <form id="signupForm" onsubmit="return validateSignup()">
+                    <div class="inputgroup">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" placeholder="email" required>
+                        <div id="signup-emailerror" class="error"> </div>
+                    </div>
+                    <div class="inputgroup">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="password" required>
+                        <div id="signup-passworderror" class="error"> </div>
+                    </div>
+                    <div class="inputgroup">
+                        <label for="signup-password">Confirm Password</label>
+                        <input type="password" id="signup-confirmpassword" placeholder="password" required>
+                        <div id="signup-passworderror" class="error"> </div>
+                    </div>
+                    <button type="submit">Signup</button>
+                
+                </form>
+                <div class="toggle-link" onclick="toggleForm('signup')">Already have an account?<span class="underline">Login</span></div>
+                
+            </div>
+        </div>
+        <script src="script.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #d668d1, #00ddeb);
+}
+.container {
+    background: rgba(255, 255,255, 0.1);
+    width: 50%;
+    min-height: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+    padding: 40px;
+    
+}
+.form-toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.form-toggle button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+.form-toggle button.active {
+    background: #5a3deb;
+    color: white;
+}
+.form-toggle button:hover {
+    background: #5a3deb;
+    color: white;
+}
+
+.form-box{
+    display: none;
+
+}
+.form-box.active {
+    display: block;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.inputgroup {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.inputgroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.inputgroup input {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+.input-group input:focus {
+    outline: none;
+    border-color: #6b48ff;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    min-height: 18px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #6b48ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #5a3de6;
+}
+
+.toggle-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #a89dd8;
+    cursor: pointer;
+
+}
+
+.toggle-link .underline {
+    text-decoration: underline;
+}
+
+.toggle-link:hover .underline {
+    color: #5a3deb;
+}
