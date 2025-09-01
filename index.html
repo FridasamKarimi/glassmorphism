@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=visibility" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" />
+        <title>Login/Signup Form</title>
     </head>
     <body>
         <div class="container">
@@ -12,63 +13,55 @@
                 <button id="login-btn" class="active">Login</button>
                 <button id="signup-btn">Signup</button>
             </div>
-
-
             <div id="login-form" class="form-box active">
                 <h2>Login</h2>
                 <form id="loginForm" onsubmit="return validateLogin()">
                     <div class="inputgroup">
                         <label for="login-email">Email</label>
                         <input type="email" id="login-email" placeholder="email" required>
-                        <div id="login-emailerror" class="error"> </div>
+                        <div id="login-emailerror" class="error"></div>
                     </div>
                     <div class="inputgroup">
-                        <label for="loginpassword">Password</label>
+                        <label for="login-password">Password</label>
                         <div class="input-wrapper">
                             <input type="password" id="login-password" placeholder="Enter password" required>
-                            <span class="material-symbols-outlined" onclick="togglePassword('login-password', this)">visibility</span>
+                            <span class="material-symbols-outlined" onclick="togglePassword('login-password', this)" aria-label="Toggle password visibility">visibility</span>
                         </div>
-                        <div id="login-passworderror" class="error"> </div>
+                        <div id="login-passworderror" class="error"></div>
                     </div>
                     <button type="submit">Login</button>
                 </form>
-                <div class="toggle-link" onclick="toggleForm('signup')">Don't have an account?<span class="underline">Signup</span>
-                </div>
+                <div class="toggle-link" onclick="toggleForm('signup')">Don't have an account? <span class="underline">Signup</span></div>
             </div>
-<!--Signup form-->
             <div id="signup-form" class="form-box">
                 <h2>Sign Up</h2>
                 <form id="signupForm" onsubmit="return validateSignup()">
                     <div class="inputgroup">
                         <label for="signup-email">Email</label>
                         <input type="email" id="signup-email" placeholder="email" required>
-                        <div id="signup-emailerror" class="error"> </div>
+                        <div id="signup-emailerror" class="error"></div>
                     </div>
                     <div class="inputgroup">
                         <label for="signup-password">Password</label>
                         <div class="input-wrapper">
                             <input type="password" id="signup-password" placeholder="password" required>
-                            <span class="material-symbols-outlined" onclick="togglePassword('signup-password', this)">visibility</span>
+                            <span class="material-symbols-outlined" onclick="togglePassword('signup-password', this)" aria-label="Toggle password visibility">visibility</span>
                         </div>
-                        <div id="signup-passworderror" class="error"> </div>
-
+                        <div id="signup-passworderror" class="error"></div>
                     </div>
                     <div class="inputgroup">
-                        <label for="signup-password">Confirm Password</label>
+                        <label for="signup-confirm-password">Confirm Password</label>
                         <div class="input-wrapper">
                             <input type="password" id="signup-confirm-password" placeholder="password" required>
-                        <span class="material-symbols-outlined" onclick="togglePassword('signup-confirmpassword', this)">visibility</span>
+                            <span class="material-symbols-outlined" onclick="togglePassword('signup-confirm-password', this)" aria-label="Toggle password visibility">visibility</span>
                         </div>
-                        <div id="signup-passworderror" class="error"> </div>
+                        <div id="signup-confirmpassworderror" class="error"></div>
                     </div>
                     <button type="submit">Signup</button>
-                
                 </form>
-                <div class="toggle-link" onclick="toggleForm('login')">Already have an account?<span class="underline">Login</span></div>
-                
+                <div class="toggle-link" onclick="toggleForm('login')">Already have an account? <span class="underline">Login</span></div>
             </div>
         </div>
         <script src="script.js"></script>
-
     </body>
 </html>
